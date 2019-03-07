@@ -1,6 +1,6 @@
 from conans import ConanFile, CMake
 class Pkg(ConanFile):
-    name = "LibA"
+    name = "C"
     version = "1.0.0"
     settings = "os", "compiler", "arch", "build_type"
     requires = None
