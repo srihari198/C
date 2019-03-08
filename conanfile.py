@@ -3,7 +3,7 @@ class Pkg(ConanFile):
     name = "TestC"
     version = "1.0.1"
     settings = "os", "compiler", "arch", "build_type"
-    requires = None
+    requires = "Boost/1.64.0@conan/stable"
     generators = "cmake"
     exports_sources = "src/*"
 
