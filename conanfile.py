@@ -3,7 +3,7 @@ class Pkg(ConanFile):
     name = "TestC"
     version = "1.0.1"
     settings = "os", "compiler", "arch", "build_type"
-    requires = "plibsys/0.0.4@saprykin/stable"
+    requires = "plibsys/0.0.4@saprykin/stable --build missing"
     generators = "cmake"
     exports_sources = "src/*"
 
