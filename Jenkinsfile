@@ -6,6 +6,13 @@ node{
     stage("Get recipe"){
         checkout scm
     }
+    stage("Get dependencies and publish build info"){
+        sh "mkdir -p build"
+        dir ('build') {
+          def b = client.run(command: "install ..")
+          server.publishBuildInfo b
+        }
+    }
     stage("Create package"){
         client.run(command: "create . user/test -s arch=x86_64")
     }
