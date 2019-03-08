@@ -9,7 +9,7 @@ node{
     stage("Get dependencies and publish build info"){
         sh "mkdir -p build"
         dir ('build') {
-          def b = client.run(command: "install ..")
+          def b = client.run(command: "install .. --build missing")
           server.publishBuildInfo b
         }
     }
