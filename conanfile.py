@@ -1,7 +1,7 @@
 from conans import ConanFile, CMake
 class Pkg(ConanFile):
     name = "TestC"
-    version = "1.0.0"
+    version = "1.0.1"
     settings = "os", "compiler", "arch", "build_type"
     requires = None
     generators = "cmake"
